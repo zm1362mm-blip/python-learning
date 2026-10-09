@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0b1020">
+<title>آموزش پایتون محمد معبودی</title>
+<style>
+:root{--bg:#080d1b;--panel:#121b30;--panel2:#192640;--text:#eef4ff;--muted:#a9b7d0;--cyan:#42e4d2;--purple:#a79aff;--line:#2a3957;--gold:#ffd36a}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at top right,#1b3155 0,#080d1b 48%,#070b14 100%);color:var(--text);font-family:Tahoma,Arial,sans-serif;line-height:1.9}button,input,textarea,select{font:inherit}button,a{cursor:pointer}a{color:var(--cyan);text-decoration:none}header{padding:14px 12px 12px;text-align:center;background:linear-gradient(125deg,#172548,#30336c 55%,#087e8b);border-bottom:1px solid #ffffff25;position:relative;overflow:hidden}header:after{content:'{ }';position:absolute;font-size:160px;opacity:.06;left:5%;top:-40px;direction:ltr}.logo{width:46px;height:46px;border-radius:23px;display:grid;place-items:center;margin:auto auto 5px;background:linear-gradient(135deg,var(--cyan),var(--purple));font-size:25px;color:#071522;font-weight:bold;box-shadow:0 10px 35px #42e4d233}h1{font-size:clamp(24px,5vw,38px);margin:0}header p{margin:3px;color:#dbeaff} h1{font-size:clamp(20px,4vw,30px)}.pill{display:inline-block;padding:4px 12px;border:1px solid #ffffff44;border-radius:99px;background:#ffffff12;font-size:12px;margin:5px}nav{position:sticky;top:0;z-index:20;display:flex;gap:6px;justify-content:center;flex-wrap:wrap;background:#0b1223ed;backdrop-filter:blur(12px);padding:5px;border-bottom:1px solid var(--line)}nav a{padding:5px 8px;color:var(--muted);font-size:12px;border-radius:9px}nav a:hover{background:var(--panel2);color:var(--cyan)}main{max-width:1100px;width:93%;margin:auto}.hero{text-align:center;padding:28px 5px 8px}.hero h2{color:var(--cyan);margin:0}.muted{color:var(--muted)}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:18px 0}.stat,.card,.box{background:linear-gradient(145deg,#17233b,#10182a);border:1px solid var(--line);border-radius:17px;padding:16px}.stat strong{display:block;color:var(--cyan);font-size:22px}.stat span{font-size:12px;color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:20px 0}.card{transition:.2s}.card:hover{transform:translateY(-3px);border-color:#42e4d277}.icon{font-size:30px}.card h3{margin:4px 0;color:#fff}.card p{font-size:13px;color:var(--muted);min-height:48px}.btn{display:inline-block;border:0;border-radius:11px;padding:10px 15px;background:linear-gradient(100deg,#2bd2c3,#7b8cff);color:#061522;font-weight:bold}.btn.secondary{background:#263653;color:var(--text);border:1px solid #3b4d6e}.btn.gold{background:linear-gradient(100deg,#ffd36a,#f7a84c)}.section{margin:26px 0;scroll-margin-top:80px}.section h2{font-size:23px;margin-bottom:10px}.two{display:grid;grid-template-columns:1fr 1fr;gap:15px}.hide{display:none!important}.search{width:100%;padding:12px 14px;border-radius:12px;background:#080f20;border:1px solid var(--line);color:var(--text);margin:8px 0 14px}.lesson-list{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.lesson{border:1px solid var(--line);border-radius:13px;padding:13px;background:#101a2c}.lesson h3{margin:0;color:var(--purple);font-size:16px}.lesson p{font-size:13px;color:var(--muted);margin:4px 0 9px}.lesson details{margin-top:8px}.lesson summary{color:var(--cyan);cursor:pointer}.code{direction:ltr;text-align:left;white-space:pre-wrap;overflow-wrap:anywhere;background:#070c16;color:#a4f5dd;padding:13px;border-radius:10px;border:1px solid #283854;font:13px/1.8 monospace;position:relative}.copy{margin:4px 0 8px}.editor{width:100%;min-height:180px;direction:ltr;text-align:left;background:#070c16;color:#a4f5dd;border:1px solid #30405f;border-radius:12px;padding:14px;font:14px/1.7 monospace}.output{direction:ltr;text-align:left;white-space:pre-wrap;background:#080f20;border:1px solid var(--line);padding:12px;border-radius:10px;min-height:45px;margin-top:10px}.quizq{padding:13px;border:1px solid var(--line);border-radius:12px;margin:10px 0}.quizq label{display:block;cursor:pointer;padding:3px;color:var(--muted)}.progress{height:10px;background:#26334d;border-radius:99px;overflow:hidden}.progress div{height:100%;background:linear-gradient(90deg,var(--cyan),var(--purple));width:0%;transition:.3s}.badge{display:inline-block;border:1px solid #4d5d7b;border-radius:10px;padding:7px 10px;margin:4px;background:#101a2c}.badge.earned{border-color:#d7b85b;color:var(--gold)}.field{display:block;width:100%;margin:8px 0;padding:10px;background:#080f20;border:1px solid var(--line);border-radius:10px;color:var(--text)}footer{text-align:center;padding:25px;color:var(--muted);border-top:1px solid var(--line);margin-top:35px;font-size:13px}.notice{border:1px solid #78683d;background:#2b2416;color:#ffe5a4;padding:12px;border-radius:12px;font-size:13px}.small{font-size:12px;color:var(--muted)}@media(max-width:760px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.stats{grid-template-columns:repeat(2,1fr)}.two,.lesson-list{grid-template-columns:1fr}nav{justify-content:flex-start;overflow:auto;flex-wrap:nowrap}nav a{white-space:nowrap}}@media(max-width:420px){.grid{grid-template-columns:1fr}.card p{min-height:0}}
+
+.extra-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:16px 0}.extra-card{background:linear-gradient(145deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 12px 30px #0002}.extra-card h3{margin-top:0}.extra-card p{color:var(--muted);line-height:1.8}.extra-card input,.extra-card textarea,.extra-card select{width:100%;margin:6px 0 10px;padding:11px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--text);font:inherit}.extra-card button,.extra-btn{border:0;border-radius:10px;padding:10px 14px;background:var(--cyan);color:#07111d;font-weight:700;cursor:pointer;margin:4px}.extra-card pre{white-space:pre-wrap;overflow-wrap:anywhere;color:var(--cyan)}.tag{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:4px 9px;margin:3px;color:var(--purple);font-size:.85rem}.extra-card .muted{font-size:.9rem;color:var(--muted)}
+
+
+
+/* Compact layout update: less scrolling, especially on phones */
+header{padding:14px 10px 12px}
+header:after{font-size:110px;top:-25px}
+.logo{width:48px;height:48px;border-radius:14px;font-size:25px;margin-bottom:5px}
+header p{margin:5px}
+nav{padding:6px 8px;gap:3px}
+nav a{padding:6px 8px;font-size:12px}
+main{width:min(96%,1100px)}
+.hero{padding:9px 4px 2px}
+.stats{gap:7px;margin:10px 0}
+.stat,.card,.box{padding:11px;border-radius:13px}
+.stat strong{font-size:18px}
+.grid{gap:9px;margin:12px 0}
+.card p{min-height:0;line-height:1.55}
+.icon{font-size:25px}
+.btn{padding:8px 12px;border-radius:9px}
+.section{margin:10px 0;scroll-margin-top:58px}
+.section h2{font-size:20px;margin:0 0 8px}
+.two{gap:10px}
+.lesson-list{gap:7px}
+.lesson{padding:10px;border-radius:10px}
+.search{padding:9px 11px;margin:6px 0 10px}
+.extra-grid{gap:9px;margin:10px 0}
+.extra-card{padding:12px;border-radius:13px}
+.extra-card p{line-height:1.6}
+.extra-card input,.extra-card textarea,.extra-card select{padding:9px}
+footer{padding:16px;margin-top:22px}
+@media(max-width:760px){header{padding:12px 8px 10px}.grid{gap:8px}.section{margin:14px 0}.stats{margin:8px 0}}
+@media(max-width:420px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.card{padding:9px}.card h3{font-size:15px}.card p{font-size:12px}}
+
+.section-page-hidden{display:none!important}
+nav a.active-tab{background:linear-gradient(100deg,#2bd2c333,#7b8cff33);color:var(--cyan);border:1px solid #42e4d255}
+main{min-height:48vh}
+@media(max-width:760px){.hero h2{font-size:19px}.hero p{font-size:12px}.pill{padding:2px 8px;margin:2px;font-size:11px}}
+</style>
+</head>
+<body>
+<header><div class="logo">Py</div><h1>آموزش پایتون محمد معبودی</h1><p>از اولین خط کد تا ساخت پروژه‌های واقعی 🐍</p><span class="pill">رایگان برای شروع</span><span class="pill">مناسب موبایل و کامپیوتر</span><p><a class="btn" href="#account" style="display:inline-block;margin-top:6px">ثبت‌نام</a></p></header>
+<nav><a href="#home">خانه</a><a href="#courses">آموزش‌ها</a><a href="#account">ثبت‌نام</a><a href="#playground">محیط کدنویسی</a><a href="#quiz">آزمون‌ها</a><a href="#projects">پروژه‌ها</a><a href="#progress">پیشرفت من</a><a href="#dictionary">واژه‌نامه</a><a href="#community">پرسش‌وپاسخ</a><a href="#tools">ابزارها</a><a href="#contact">تماس</a></nav>
+<main id="home"><section class="hero"><h2>به آکادمی پایتون خوش اومدی!</h2><p class="muted">درس بخون، کد بنویس، تمرین حل کن و مهارتت رو قدم‌به‌قدم بساز.</p><button class="btn" onclick="document.querySelector('#courses').scrollIntoView()">شروع یادگیری ←</button></section>
+<div class="stats"><div class="stat"><strong id="statLessons">0</strong><span>درس‌های تکمیل‌شده</span></div><div class="stat"><strong id="statPoints">0</strong><span>امتیاز من</span></div><div class="stat"><strong id="statProjects">0</strong><span>پروژه‌های انجام‌شده</span></div><div class="stat"><strong id="statDays">0</strong><span>روزهای یادگیری ثبت‌شده</span></div></div>
+<section class="section"><h2>✨ از کجا شروع کنیم؟</h2><div class="grid"><article class="card"><div class="icon">📚</div><h3>مسیر یادگیری</h3><p>از مبانی تا توابع، کلاس‌ها و ساخت برنامه‌های کاربردی.</p><a class="btn" href="#courses">دیدن درس‌ها</a></article><article class="card"><div class="icon">💻</div><h3>محیط کدنویسی</h3><p>کد پایتون بنویس و در صورت اتصال اینترنت اجرا کن.</p><a class="btn" href="#playground">رفتن به محیط کد</a></article><article class="card"><div class="icon">🏆</div><h3>چالش و امتیاز</h3><p>آزمون‌ها را بگذران، امتیاز بگیر و پیشرفتت را ببین.</p><a class="btn" href="#quiz">شروع آزمون</a></article></div></section>
+<section class="section" id="courses"><h2>📚 آموزش‌ها؛ از صفر تا پیشرفته</h2><p class="muted">برای دیدن درس موردنظرت جست‌وجو کن. هر درس نمونه‌کد و توضیح کوتاه دارد.</p><input class="search" id="lessonSearch" placeholder="جست‌وجو: متغیر، حلقه، لیست، کلاس..." oninput="filterLessons()"><div class="lesson-list" id="lessonList">
+<div class="lesson" data-tags="شروع نصب پایتون مبتدی"><h3>۱. شروع کار با پایتون</h3><p>پایتون چیست و اولین برنامه چطور اجرا می‌شود؟</p><details><summary>مشاهده درس</summary><p>پایتون زبانی خوانا و پرکاربرد است. دستورها معمولاً از بالا به پایین اجرا می‌شوند.</p><div class="code">print("سلام دنیا!")</div><button class="btn secondary copy" onclick="copyCode(this)">کپی کد</button><button class="btn" onclick="completeLesson(this)">درس را تمام کردم +۱۰</button></details></div>
+<div class="lesson" data-tags="متغیر عدد رشته boolean انواع داده"><h3>۲. متغیرها و انواع داده</h3><p>ذخیره متن، عدد و مقدارهای درست/نادرست.</p><details><summary>مشاهده درس</summary><div class="code">name = "Mohammad"
+age = 16
+height = 175
+is_learning = True
+print(name, age)</div><p>متغیر نامی برای نگهداری داده است. برای متن از رشته و برای عدد از int یا float استفاده می‌شود.</p><button class="btn secondary copy" onclick="copyCode(this)">کپی کد</button><button class="btn" onclick="completeLesson(this)">درس را تمام کردم +۱۰</button></details></div>
+<div class="lesson" data-tags="ورودی input خروجی print"><h3>۳. ورودی و خروجی</h3><p>دریافت اطلاعات از کاربر و نمایش نتیجه.</p><details><summary>مشاهده درس</summary><div class="code">name = input("اسمت چیه؟ ")
+print("سلام", name)</div><p>تابع input داده را به‌صورت متن می‌گیرد؛ برای عدد می‌توان از int(input()) استفاده کرد.</p><button class="btn secondary copy" onclick="copyCode(this)">کپی کد</button><button class="btn" onclick="completeLesson(this)">درس را تمام کردم +۱۰</button></details></div>
+<div class="lesson" data-tags="شرط if elif else مقایسه"><h3>۴. شرط‌ها</h3><p>اجرای کد بر اساس یک شرط.</p><details><summary>مشاهده درس</summary><div class="code">score = 85
+if score >= 90:
+    print("عالی")
+elif score >= 60:
+    print("قبول")
+else:
+    print("بیشتر تمرین کن")</div><p>در پایتون تورفتگی ابتدای خط‌ها مهم است.</p><button class="btn secondary copy" onclick="copyCode(this)">کپی کد</button><button class="btn" onclick="completeLesson(this)">درس را تمام کردم +۱۰</button></details></div>
+<div class="lesson" data-tags="حلقه for while range تکرار"><h3>۵. حلقه‌های for و while</h3><p>تکرار یک کار چندین بار.</p><details><summary>مشاهده درس</summary><div class="code">for number in range(1, 6):
+    print(number)
+
+count = 3
+while count > 0:
+    print(count)
+    count -= 1</div><button class="btn secondary copy" onclick="copyCode(this)">کپی کد</button><button class="btn" onclick="completeLesson(this)">درس را تمام کردم +۱۰</button></details></div>
+<div class="lesson" data-tags="رشته string متن split replace"><h3>۶. رشته‌ها و متن</h3><p>برش، تغییر و قالب‌بندی متن.</p><details><summary>مشاهده درس</summary><div class="code">name = "mohammad"
+print(name.upper())
+print(name[0:4])
+print(f"سلام {name}")</div><button class="btn secondary copy" onclick="copyCode(this)">کپی کد</button><button class="btn" onclick="completeLesson(this)">درس را تمام کردم +۱۰</button></details></div>
+<div class="lesson" data-tags="لیست list append remove sort"><h3>۷. لیست‌ها</h3><p>نگهداری چند مقدار در یک مجموعه مرتب.</p><details><summary>مشاهده درس</summary><div class="code">fruits = ["سیب", "موز", "انگور"]
+fruits.append("پرتقال")
+print(fruits[0])
+print(len(fruits))</div><button class="btn secondary copy" onclick="copyCode(this)">کپی کد</button><button class="btn" onclick="completeLesson(this)">درس را تمام کردم +۱۰</button></details></div>
+<div class="lesson" data-tags="tuple set دیکشنری dictionary dict"><h3>۸. تاپل، مجموعه و دیکشنری</h3><p>ساختارهای پرکاربرد برای سازمان‌دهی داده.</p><details><summary>مشاهده درس</summary><div class="code">point = (10, 20)
+colors = {"آبی", "قرمز", "سبز"}
+user = {"name": "Ali", "level": 1}
+print(user["name"])</div><button class="btn secondary copy" onclick="copyCode(this)">کپی کد</button><button class="btn" onclick="completeLesson(this)">درس را تمام کردم +۱۰</button></details></div>
+<div class="lesson" data-tags="تابع function def return پارامتر"><h3>۹. توابع</h3><p>تقسیم برنامه به بخش‌های قابل استفاده مجدد.</p><details><summary>مشاهده درس</summary><div class="code">def multiply(a, b):
+    return a * b
+
+print(multiply(4, 5))</div><p>پارامترها ورودی تابع‌اند و return نتیجه را برمی‌گرداند.</p><button class="btn secondary copy" onclick="copyCode(this)">کپی کد</button><button class="btn" onclick="completeLesson(this)">درس را تمام کردم +۱۰</button></details></div>
+<div class="lesson" data-tags="خطا try except exception"><h3>۱۰. مدیریت خطاها</h3><p>جلوگیری از توقف ناخواسته برنامه.</p><details><summary>مشاهده درس</summary><div class="code">try:
+    number = int("12")
+    print(number)
+except ValueError:
+    print("ورودی باید عدد باشد")</div><button class="btn secondary copy" onclick="copyCode(this)">کپی کد</button><button class="btn" onclick="completeLesson(this)">درس را تمام کردم +۱۰</button></details></div>
+<div class="lesson" data-tags="فایل open read write with"><h3>۱۱. کار با فایل‌ها</h3><p>ذخیره و خواندن اطلاعات از فایل.</p><details><summary>مشاهده درس</summary><div class="code">with open("notes.txt", "w", encoding="utf-8") as file:
+    file.write("یادگیری پایتون")
+
+with open("notes.txt", encoding="utf-8") as file:
+    print(file.read())</div><p>این نمونه هنگام اجرا فایل را در محیط اجرای پایتون می‌سازد.</p><button class="btn secondary copy" onclick="copyCode(this)">کپی کد</button><button class="btn" onclick="completeLesson(this)">درس را تمام کردم +۱۰</button></details></div>
+<div class="lesson" data-tags="ماژول import کتابخانه random math"><h3>۱۲. ماژول‌ها و کتابخانه‌ها</h3><p>استفاده از قابلیت‌های آماده پایتون.</p><details><summary>مشاهده درس</summary><div class="code">import random
+import math
+print(random.randint(1, 10))
+print(math.sqrt(81))</div><button class="btn secondary copy" onclick="copyCode(this)">کپی کد</button><button class="btn" onclick="completeLesson(this)">درس را تمام کردم +۱۰</button></details></div>
+<div class="lesson" data-tags="کلاس شی گرایی object class init self ارث بری"><h3>۱۳. برنامه‌نویسی شیءگرا</h3><p>ساخت کلاس و نمونه از آن.</p><details><summary>مشاهده درس</summary><div class="code">class Player:
+    def __init__(self, name):
+        self.name = name
+    def greet(self):
+        print("سلام", self.name)
+
+player = Player("Sara")
+player.greet()</div><button class="btn secondary copy" onclick="copyCode(this)">کپی کد</button><button class="btn" onclick="completeLesson(this)">درس را تمام کردم +۱۰</button></details></div>
+<div class="lesson" data-tags="json api اینترنت درخواست requests"><h3>۱۴. JSON و آشنایی با API</h3><p>تبادل داده بین برنامه‌ها و سرویس‌ها.</p><details><summary>مشاهده درس</summary><div class="code">import json
+user = {"name": "Ali", "score": 20}
+text_data = json.dumps(user, ensure_ascii=False)
+print(text_data)</div><p>برای APIهای واقعی معمولاً به اینترنت و کتابخانه‌هایی مثل requests نیاز است.</p><button class="btn secondary copy" onclick="copyCode(this)">کپی کد</button><button class="btn" onclick="completeLesson(this)">درس را تمام کردم +۱۰</button></details></div>
+<div class="lesson" data-tags="sqlite پایگاه داده database sql"><h3>۱۵. پایگاه داده SQLite</h3><p>ذخیره ساختاریافته داده‌ها در برنامه.</p><details><summary>مشاهده درس</summary><div class="code">import sqlite3
+connection = sqlite3.connect("app.db")
+connection.execute("CREATE TABLE IF NOT EXISTS notes (text TEXT)")
+connection.execute("INSERT INTO notes VALUES (?)", ("سلام",))
+connection.commit()
+connection.close()</div><button class="btn secondary copy" onclick="copyCode(this)">کپی کد</button><button class="btn" onclick="completeLesson(this)">درس را تمام کردم +۱۰</button></details></div>
+<div class="lesson" data-tags="flask سایت وب سرور"><h3>۱۶. ساخت سایت با Flask</h3><p>مقدمه‌ای برای ساخت وب‌سایت با پایتون.</p><details><summary>مشاهده درس</summary><div class="code">from flask import Flask
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "سلام از سایت پایتونی!"
+
+# برای اجرا باید Flask نصب باشد و سرور اجرا شود.</div><p>این کد به نصب Flask و اجرای سرور نیاز دارد؛ در محیط مرورگر این صفحه مستقیماً اجرا نمی‌شود.</p><button class="btn secondary copy" onclick="copyCode(this)">کپی کد</button><button class="btn" onclick="completeLesson(this)">درس را تمام کردم +۱۰</button></details></div>
+<div class="lesson" data-tags="امنیت رمز عبور امنیتی"><h3>۱۷. اصول امنیتی</h3><p>نگهداری امن اطلاعات و اعتبارسنجی ورودی‌ها.</p><details><summary>مشاهده درس</summary><p>رمز عبور را در کد ثابت ننویس، ورودی‌ها را اعتبارسنجی کن، کتابخانه‌ها را از منابع معتبر نصب کن و کلیدهای API را در مخزن عمومی قرار نده.</p><button class="btn" onclick="completeLesson(this)">درس را تمام کردم +۱۰</button></details></div>
+<div class="lesson" data-tags="turtle گرافیک بازی"><h3>۱۸. رسم شکل با Turtle</h3><p>شروعی ساده برای گرافیک و رسم الگوها.</p><details><summary>مشاهده درس</summary><div class="code">import turtle
+pen = turtle.Turtle()
+for _ in range(4):
+    pen.forward(100)
+    pen.right(90)
+turtle.done()</div><p>این کد در محیط‌هایی که پنجره گرافیکی Turtle دارند اجرا می‌شود.</p><button class="btn secondary copy" onclick="copyCode(this)">کپی کد</button><button class="btn" onclick="completeLesson(this)">درس را تمام کردم +۱۰</button></details></div>
+</div></section>
+<section class="section" id="playground"><h2>💻 محیط کدنویسی پایتون</h2><div class="box"><p class="muted">کد خودت را بنویس و روی «اجرا» بزن. اجرای واقعی با Pyodide و از طریق اینترنت بارگذاری می‌شود؛ اگر اینترنت یا بارگذاری کتابخانه در دسترس نباشد، پیام راهنما نمایش داده می‌شود.</p><textarea id="codeInput" class="editor" spellcheck="false">name = "دوست من"
+for i in range(1, 4):
+    print(f"سلام {name}! شماره {i}")</textarea><p><button class="btn" id="runCode">▶ اجرای کد</button> <button class="btn secondary" onclick="document.querySelector('#codeInput').value='print(2 + 3)';">نمونه ساده</button> <button class="btn secondary" onclick="document.querySelector('#codeOutput').textContent='';">پاک‌کردن خروجی</button></p><div id="codeOutput" class="output">خروجی اینجا نمایش داده می‌شود…</div><p class="small">نکته: اجرای کد داخل مرورگر به اینترنت نیاز دارد. از اجرای کدهای ناشناس یا خطرناک خودداری کن.</p></div></section>
+<section class="section" id="quiz"><h2>🧠 آزمون کوتاه پایتون</h2><div class="box"><p>به سؤال‌ها جواب بده و نتیجه را ببین. پاسخ‌ها و امتیاز در همین مرورگر ذخیره می‌شوند.</p><div class="quizq"><b>۱. کدام دستور متن را چاپ می‌کند؟</b><label><input type="radio" name="q1" value="0"> echo()</label><label><input type="radio" name="q1" value="1"> print()</label><label><input type="radio" name="q1" value="0"> show()</label></div><div class="quizq"><b>۲. کدام علامت برای تعریف تابع استفاده می‌شود؟</b><label><input type="radio" name="q2" value="1"> def</label><label><input type="radio" name="q2" value="0"> func</label><label><input type="radio" name="q2" value="0"> make</label></div><div class="quizq"><b>۳. نتیجه‌ی 3 * 4 چیست؟</b><label><input type="radio" name="q3" value="0"> 7</label><label><input type="radio" name="q3" value="1"> 12</label><label><input type="radio" name="q3" value="0"> 34</label></div><button class="btn gold" onclick="gradeQuiz()">ثبت پاسخ‌ها</button><div id="quizResult" class="output" aria-live="polite">هنوز آزمون نداده‌ای.</div></div></section>
+<section class="section" id="projects"><h2>🛠️ پروژه‌های عملی</h2><div class="grid"><article class="card"><div class="icon">🎲</div><h3>بازی حدس عدد</h3><p>با شرط‌ها و ورودی کاربر یک بازی کوچک بساز.</p><details><summary>دیدن کد نمونه</summary><div class="code">import random
+secret = random.randint(1, 10)
+guess = int(input("عدد ۱ تا ۱۰: "))
+if guess == secret:
+    print("آفرین! درست حدس زدی")
+else:
+    print("عدد درست:", secret)</div></details><button class="btn" onclick="completeProject(this)">انجام شد +۲۰</button></article><article class="card"><div class="icon">🧮</div><h3>ماشین‌حساب</h3><p>چهار عمل اصلی را با توابع پیاده‌سازی کن.</p><details><summary>ایده پروژه</summary><p>دو عدد و یک عملگر بگیر؛ با if/elif عملیات درست را انجام بده و تقسیم بر صفر را مدیریت کن.</p></details><button class="btn" onclick="completeProject(this)">انجام شد +۲۰</button></article><article class="card"><div class="icon">🗒️</div><h3>مدیریت کارها</h3><p>یک فهرست کار بساز و امکان افزودن و حذف داشته باش.</p><details><summary>ایده پروژه</summary><p>از لیست، حلقه و توابع استفاده کن؛ نسخه پیشرفته‌تر می‌تواند اطلاعات را در فایل ذخیره کند.</p></details><button class="btn" onclick="completeProject(this)">انجام شد +۲۰</button></article><article class="card"><div class="icon">🌐</div><h3>وب‌سایت با Flask</h3><p>یک صفحه ساده با مسیرهای مختلف بساز.</p><details><summary>ایده پروژه</summary><p>Flask را نصب کن، مسیر خانه و درباره‌ما بساز و قالب HTML اضافه کن.</p></details><button class="btn" onclick="completeProject(this)">انجام شد +۲۰</button></article><article class="card"><div class="icon">📇</div><h3>دفترچه مخاطبین</h3><p>نام و شماره را ذخیره و جست‌وجو کن.</p><details><summary>ایده پروژه</summary><p>از دیکشنری یا SQLite استفاده کن؛ قابلیت افزودن، نمایش و جست‌وجو را بساز.</p></details><button class="btn" onclick="completeProject(this)">انجام شد +۲۰</button></article><article class="card"><div class="icon">🎮</div><h3>بازی دوبعدی</h3><p>با کتابخانه Pygame بازی ساده بساز.</p><details><summary>ایده پروژه</summary><p>بازیکن، حرکت، برخورد و امتیاز را مرحله‌به‌مرحله اضافه کن. نصب Pygame لازم است.</p></details><button class="btn" onclick="completeProject(this)">انجام شد +۲۰</button></article></div></section>
+<section class="section" id="progress"><h2>📈 پنل پیشرفت من</h2><div class="two"><div class="box"><h3>پیشرفت درس‌ها</h3><div class="progress"><div id="lessonBar"></div></div><p id="lessonProgressText" class="muted">۰ از ۱۸ درس تکمیل شده</p><h3>نشان‌ها</h3><div id="badges"><span class="badge">🌱 شروع یادگیری</span></div></div><div class="box"><h3>تنظیم پیشرفت</h3><p class="muted">پیشرفت درس‌ها در این نسخه روی همین دستگاه ذخیره می‌شود.</p><button class="btn secondary" onclick="resetProgress()">بازنشانی پیشرفت</button></div></div><div class="notice" style="margin-top:14px">ذخیره‌سازی این نسخه با حافظه مرورگر (localStorage) انجام می‌شود؛ با پاک‌کردن داده‌های مرورگر یا استفاده از دستگاه دیگر، اطلاعات ممکن است از بین برود. برای حساب‌های واقعی و همگام‌سازی بین کاربران، سرور و پایگاه داده لازم است.</div></section>
+<section class="section" id="dictionary"><h2>📖 واژه‌نامه برنامه‌نویسی</h2><input class="search" id="dictSearch" placeholder="جست‌وجوی واژه..." oninput="filterDictionary()"><div id="dictList" class="lesson-list"><div class="lesson" data-word="متغیر variable"><h3>Variable — متغیر</h3><p>نامی برای نگهداری یک مقدار در برنامه.</p></div><div class="lesson" data-word="تابع function"><h3>Function — تابع</h3><p>بخش قابل استفاده مجدد از کد که می‌تواند ورودی و خروجی داشته باشد.</p></div><div class="lesson" data-word="حلقه loop"><h3>Loop — حلقه</h3><p>ساختاری برای تکرار یک یا چند دستور.</p></div><div class="lesson" data-word="لیست list"><h3>List — لیست</h3><p>مجموعه‌ای مرتب و قابل تغییر از عناصر.</p></div><div class="lesson" data-word="اشکال زدایی debug"><h3>Debug — اشکال‌زدایی</h3><p>پیدا کردن و اصلاح خطاهای برنامه.</p></div><div class="lesson" data-word="api رابط برنامه نویسی"><h3>API — رابط برنامه‌نویسی</h3><p>روشی تعریف‌شده برای ارتباط بین نرم‌افزارها.</p></div><div class="lesson" data-word="کتابخانه library"><h3>Library — کتابخانه</h3><p>مجموعه‌ای از کدهای آماده برای استفاده در برنامه.</p></div><div class="lesson" data-word="کلاس class"><h3>Class — کلاس</h3><p>الگویی برای ساخت اشیا در برنامه‌نویسی شیءگرا.</p></div></div></section>
+<section class="section" id="tools"><h2>🧰 ابزارهای کاربردی</h2><div class="grid"><article class="card"><div class="icon">🔢</div><h3>تبدیل‌گر عدد</h3><p>تبدیل عدد ده‌دهی به دودویی و شانزده‌شانزدهی.</p><input id="numberInput" class="field" type="number" placeholder="یک عدد وارد کن"><button class="btn" onclick="convertNumber()">تبدیل</button><p id="numberResult" class="muted"></p></article><article class="card"><div class="icon">🧠</div><h3>ایده‌ساز پروژه</h3><p>برای تمرین بعدی یک ایده تصادفی دریافت کن.</p><button class="btn" onclick="projectIdea()">ایده بده</button><p id="ideaResult" class="muted"></p></article><article class="card"><div class="icon">📅</div><h3>برنامه تمرین</h3><p>یک برنامه کوتاه برای پیشرفت منظم.</p><p>روزانه ۲۰ دقیقه درس، ۲۰ دقیقه کدنویسی و ۱۰ دقیقه مرور.</p><button class="btn secondary" onclick="alert('برنامه امروز: یک درس بخوان، یک تمرین حل کن و کدت را ذخیره کن!')">برنامه امروز</button></article></div></section>
+<section class="section" id="community"><h2>💬 پرسش‌وپاسخ</h2><div class="box"><p class="muted">می‌توانی پرسش یا یادداشت خودت را در این دستگاه ثبت کنی. این بخش هنوز انجمن عمومی نیست و پیام‌ها برای سایر کاربران ارسال نمی‌شوند.</p><input id="questionTitle" class="field" placeholder="عنوان پرسش"><textarea id="questionText" class="field" rows="3" placeholder="سؤالت را اینجا بنویس..."></textarea><button class="btn" onclick="addQuestion()">ثبت یادداشت</button><div id="questionList"></div></div></section>
+<section class="section" id="contact"><h2>✉️ تماس با مدیر سایت</h2><div class="box"><p>برای پیشنهاد درس یا گزارش مشکل، پیام خودت را بنویس.</p><input class="field" id="contactSubject" placeholder="موضوع پیام"><textarea class="field" id="contactMessage" rows="3" placeholder="متن پیام"></textarea><button class="btn" onclick="prepareContact()">آماده‌کردن پیام</button><p id="contactStatus" class="muted"></p><p class="small">این فرم فعلاً پیام را به سرور ارسال نمی‌کند؛ برای ارسال واقعی باید ایمیل یا بک‌اند متصل شود.</p></div></section>
+</main><footer>© آموزش پایتون محمد معبودی — یادگیری با تمرین بهتر می‌شود 💙<br><span class="small">نسخه آموزشی HTML؛ برخی قابلیت‌ها برای آنلاین‌شدن کامل به سرویس میزبانی و بک‌اند نیاز دارند.</span></footer>
+<script>
+const KEY='maboudiPythonAcademyV2';let state={completed:[],projects:[],points:0,days:1,name:'',questions:[],quizBest:0};function loadState(){try{const s=JSON.parse(localStorage.getItem(KEY)||'{}');state={...state,...s};}catch(e){} if(!state.days)state.days=1;renderState()}function saveState(){localStorage.setItem(KEY,JSON.stringify(state));renderState()}function renderState(){document.getElementById('statLessons').textContent=state.completed.length;document.getElementById('statPoints').textContent=state.points;document.getElementById('statProjects').textContent=state.projects.length;document.getElementById('statDays').textContent=state.days;let percent=Math.round(state.completed.length/18*100);document.getElementById('lessonBar').style.width=percent+'%';document.getElementById('lessonProgressText').textContent=state.completed.length+' از ۱۸ درس تکمیل شده ('+percent+'٪)';let b=[];if(state.completed.length>=1)b.push('🌱 شروع یادگیری');if(state.completed.length>=5)b.push('📘 پنج درس');if(state.completed.length>=10)b.push('🧠 ده درس');if(state.completed.length>=18)b.push('🏆 تکمیل همه درس‌ها');if(state.points>=50)b.push('⭐ ۵۰ امتیاز');if(state.projects.length>=3)b.push('🛠️ سازنده پروژه');document.getElementById('badges').innerHTML=b.map(x=>'<span class="badge earned">'+x+'</span>').join('')||'<span class="badge">هنوز نشانی دریافت نکرده‌ای</span>';document.getElementById('displayName').value=state.name||'';document.getElementById('nameStatus').textContent=state.name?'سلام '+state.name+'!':'نام نمایشی ثبت نشده است.';document.getElementById('questionList').innerHTML=(state.questions||[]).map(q=>'<div class="lesson"><h3>'+escapeHtml(q.title)+'</h3><p>'+escapeHtml(q.text)+'</p><span class="small">یادداشت محلی</span></div>').join('')}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}function completeLesson(btn){let card=btn.closest('.lesson'),idx=[...document.querySelectorAll('#lessonList .lesson')].indexOf(card);if(state.completed.includes(idx)){btn.textContent='قبلاً تکمیل شده ✓';return}state.completed.push(idx);state.points+=10;btn.textContent='تکمیل شد ✓';saveState()}function completeProject(btn){let title=btn.closest('.card').querySelector('h3').textContent;if(state.projects.includes(title)){btn.textContent='قبلاً ثبت شده ✓';return}state.projects.push(title);state.points+=20;btn.textContent='ثبت شد ✓';saveState()}function filterLessons(){let q=document.getElementById('lessonSearch').value.toLowerCase();document.querySelectorAll('#lessonList .lesson').forEach(el=>el.classList.toggle('hide',!(el.innerText+' '+el.dataset.tags).toLowerCase().includes(q)))}function filterDictionary(){let q=document.getElementById('dictSearch').value.toLowerCase();document.querySelectorAll('#dictList .lesson').forEach(el=>el.classList.toggle('hide',!(el.innerText+' '+el.dataset.word).toLowerCase().includes(q)))}async function copyCode(btn){let code=btn.closest('details').querySelector('.code').innerText;try{await navigator.clipboard.writeText(code);btn.textContent='کپی شد ✓'}catch(e){alert('کپی خودکار ممکن نیست؛ کد را انتخاب و کپی کن.')}}function gradeQuiz(){let score=0;for(let i=1;i<=3;i++){let v=document.querySelector('input[name="q'+i+'"]:checked');if(v)score+=Number(v.value)}document.getElementById('quizResult').textContent='نتیجه: '+score+' از ۳ پاسخ صحیح.';if(score>state.quizBest){state.quizBest=score;state.points+=score*5;saveState()}if(score===3)document.getElementById('quizResult').textContent+=' عالی! ۱۵ امتیاز برای بهترین نتیجه ثبت شد.'}function saveName(){state.name=document.getElementById('displayName').value.trim();saveState()}function resetProgress(){if(confirm('تمام امتیازها و پیشرفت ذخیره‌شده روی این مرورگر پاک شود؟')){state={completed:[],projects:[],points:0,days:1,name:'',questions:[],quizBest:0};saveState()}}function convertNumber(){let n=Number(document.getElementById('numberInput').value);if(!Number.isInteger(n)||n<0){document.getElementById('numberResult').textContent='یک عدد صحیح صفر یا بزرگ‌تر وارد کن.';return}document.getElementById('numberResult').textContent='دودویی: '+n.toString(2)+' | شانزده‌شانزدهی: '+n.toString(16).toUpperCase()}function projectIdea(){let ideas=['بازی سنگ، کاغذ، قیچی','برنامه یادآور کارها','مدیریت هزینه‌های روزانه','دفترچه یادداشت با فایل','آزمون چهارگزینه‌ای','مبدل واحدهای ساده'];document.getElementById('ideaResult').textContent=ideas[Math.floor(Math.random()*ideas.length)]}function addQuestion(){let title=document.getElementById('questionTitle').value.trim(),text=document.getElementById('questionText').value.trim();if(!title||!text){alert('عنوان و متن پرسش را بنویس.');return}state.questions.unshift({title,text});state.questions=state.questions.slice(0,20);document.getElementById('questionTitle').value='';document.getElementById('questionText').value='';saveState()}function prepareContact(){let s=document.getElementById('contactSubject').value.trim(),m=document.getElementById('contactMessage').value.trim();if(!s||!m){document.getElementById('contactStatus').textContent='لطفاً موضوع و متن پیام را وارد کن.';return}let body='موضوع: '+s+'\n\n'+m;document.getElementById('contactStatus').textContent='پیام آماده شد. برای ارسال واقعی، آدرس ایمیل مدیر باید به سایت متصل شود. متن پیام: '+body}
+let pyodide=null;document.getElementById('runCode').addEventListener('click',async()=>{const out=document.getElementById('codeOutput'),code=document.getElementById('codeInput').value;out.textContent='در حال آماده‌سازی محیط پایتون…';try{if(!pyodide){if(!window.loadPyodide){await new Promise((resolve,reject)=>{let s=document.createElement('script');s.src='https://cdn.jsdelivr.net/pyodide/v0.27.7/full/pyodide.js';s.onload=resolve;s.onerror=()=>reject(new Error('بارگذاری کتابخانه ناموفق بود'));document.head.appendChild(s)})}pyodide=await loadPyodide()}let logs=[];pyodide.setStdout({batched:(x)=>logs.push(x)});pyodide.setStderr({batched:(x)=>logs.push(x)});await pyodide.runPythonAsync(code);out.textContent=logs.join('\n')||'کد اجرا شد (خروجی متنی ندارد).'}catch(e){out.textContent='اجرا نشد: '+e.message+'\nاین قابلیت به اینترنت نیاز دارد. می‌توانی کد را در Python یا Pydroid 3 اجرا کنی.'}});loadState();
+</script>
+<section id="careerPaths" class="section">
+<h2>🧭 مسیرهای تخصصی پایتون</h2><p class="muted">مسیر مناسب خودت را انتخاب کن و قدم‌به‌قدم جلو برو.</p>
+<div class="extra-grid">
+<article class="extra-card"><h3>🌐 توسعه وب</h3><p>مبانی پایتون ← HTTP و API ← Flask ← پایگاه داده ← پروژه وب</p><span class="tag">متوسط</span><button onclick="savePath('توسعه وب')">ذخیره مسیر</button></article>
+<article class="extra-card"><h3>📊 تحلیل داده</h3><p>پایتون پایه ← NumPy ← Pandas ← نمودارها ← پروژه تحلیل داده</p><span class="tag">متوسط</span><button onclick="savePath('تحلیل داده')">ذخیره مسیر</button></article>
+<article class="extra-card"><h3>🤖 هوش مصنوعی</h3><p>پایتون ← ریاضی پایه ← کار با داده ← یادگیری ماشین ← پروژه مقدماتی</p><span class="tag">پیشرفته</span><button onclick="savePath('هوش مصنوعی')">ذخیره مسیر</button></article>
+<article class="extra-card"><h3>🎮 بازی‌سازی</h3><p>شرط و حلقه ← تابع ← Pygame ← برخوردها و امتیاز ← بازی کامل</p><span class="tag">مبتدی تا متوسط</span><button onclick="savePath('بازی‌سازی')">ذخیره مسیر</button></article>
+<article class="extra-card"><h3>⚙️ اتوماسیون</h3><p>فایل‌ها ← مسیرها ← زمان‌بندی ← درخواست‌های وب ← اسکریپت کاربردی</p><span class="tag">متوسط</span><button onclick="savePath('اتوماسیون')">ذخیره مسیر</button></article>
+<article class="extra-card"><h3>🔐 کدنویسی امن</h3><p>اعتبارسنجی ورودی ← مدیریت اسرار ← به‌روزرسانی وابستگی‌ها ← تست امنیتی</p><span class="tag">همه سطوح</span><button onclick="savePath('کدنویسی امن')">ذخیره مسیر</button></article>
+</div><p id="pathStatus" class="muted"></p></section>
+<section id="dailyChallenge" class="section"><h2>⚡ چالش روزانه</h2><div class="extra-card"><p><b>چالش:</b> تابعی بنویس که یک عدد بگیرد و مشخص کند زوج است یا فرد.</p><textarea id="challengeAnswer" rows="4" placeholder="کد پایتونت را اینجا بنویس..."></textarea><button onclick="checkChallenge()">بررسی پاسخ</button><button onclick="document.getElementById('challengeAnswer').value='def even_or_odd(n):\n    return 'زوج' if n % 2 == 0 else 'فرد''">نمایش نمونه</button><p id="challengeResult"></p></div></section>
+<section id="favorites" class="section"><h2>❤️ درس‌های ذخیره‌شده</h2><div class="extra-card"><p>نام درس یا موضوعی را که می‌خواهی بعداً بخوانی ذخیره کن.</p><input id="favInput" placeholder="مثلاً حلقه‌های for"><button onclick="addFavorite()">ذخیره درس</button><div id="favList"></div></div></section>
+<section id="studyPlan" class="section"><h2>📅 برنامه یادگیری</h2><div class="extra-card"><label>امروز چند دقیقه وقت داری؟</label><select id="studyMinutes"><option value="15">۱۵ دقیقه</option><option value="30" selected>۳۰ دقیقه</option><option value="45">۴۵ دقیقه</option><option value="60">۶۰ دقیقه</option></select><button onclick="makeStudyPlan()">ساخت برنامه امروز</button><div id="studyPlanResult"></div><p class="muted">برنامه روی همین دستگاه ذخیره می‌شود.</p></div></section>
+<section id="mohammadAI" class="section"><h2>🤖 Mohammad AI — دستیار تمرینی</h2><div class="extra-card"><p>سؤالت را بنویس تا راهنمایی اولیه دریافت کنی. این نسخه پاسخ‌گوی ساده و آفلاین است؛ هنوز به سرویس هوش مصنوعی واقعی وصل نیست.</p><textarea id="aiQuestion" rows="3" placeholder="مثلاً فرق list و tuple چیست؟"></textarea><button onclick="askLocalAI()">دریافت راهنمایی</button><div id="aiAnswer" aria-live="polite"></div><p class="muted">برای گفت‌وگوی هوشمند واقعی باید API و بک‌اند امن متصل شود؛ کلید API را داخل فایل HTML قرار نده.</p></div></section>
+<section id="communityBoard" class="section"><h2>👥 تابلو پرسش‌های محلی</h2><div class="extra-card"><p>این نسخه پرسش‌ها را فقط روی دستگاه خودت نگه می‌دارد؛ برای انجمن عمومی و دیدن پرسش‌های دیگران، سرور و پایگاه داده لازم است.</p><input id="boardTitle" placeholder="عنوان پرسش"><textarea id="boardBody" rows="3" placeholder="سؤالت را بنویس"></textarea><button onclick="postLocalQuestion()">ثبت روی این دستگاه</button><div id="boardPosts"></div></div></section>
+
+<section class="section" id="account"><h2>👤 حساب کاربری آنلاین</h2><div class="notice">پس از تنظیم اطلاعات عمومی پروژه Supabase و انتشار سایت روی HTTPS، ثبت‌نام و ورود آنلاین فعال می‌شود.</div><div class="extra-card"><label for="regName">نام نمایشی (برای ثبت‌نام)</label><input id="regName" maxlength="60" placeholder="نام نمایشی"><label for="regEmail">ایمیل</label><input id="regEmail" type="email" maxlength="254" autocomplete="email" placeholder="you@example.com"><label for="regPass">رمز عبور</label><input id="regPass" type="password" minlength="8" maxlength="80" autocomplete="current-password" placeholder="حداقل ۸ نویسه"><div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px"><button class="btn" onclick="registerOnline()">ثبت‌نام</button><button class="btn secondary" onclick="loginOnline()">ورود</button><button class="btn secondary" onclick="logoutOnline()">خروج</button></div><p id="regStatus" aria-live="polite"></p><div id="accountState" class="notice" aria-live="polite">وضعیت حساب: هنوز متصل نشده</div></div></section>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+// برای اتصال واقعی، URL و کلید عمومی (anon/publishable) پروژه Supabase را اینجا قرار بده.
+// هرگز service_role key یا کلید محرمانه سرور را در HTML قرار نده.
+const SUPABASE_URL = 'YOUR_SUPABASE_PROJECT_URL';
+const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_PUBLISHABLE_OR_ANON_KEY';
+let supabaseClient = null;
+try { if (window.supabase && SUPABASE_URL.startsWith('https://') && SUPABASE_ANON_KEY !== 'YOUR_SUPABASE_PUBLISHABLE_OR_ANON_KEY') { supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY); } } catch (e) {}
+async function loginOnline(){
+ const email=document.getElementById('regEmail').value.trim();
+ const password=document.getElementById('regPass').value;
+ const status=document.getElementById('regStatus');
+ if(!email||password.length<8){status.textContent='ایمیل و رمز عبور حداقل ۸ نویسه وارد کن.';return;}
+ if(!supabaseClient){status.textContent='اتصال Supabase هنوز تنظیم نشده؛ فایل تنظیمات باید با URL و کلید عمومی پروژه پر شود.';return;}
+ status.textContent='در حال ورود…';
+ const {data,error}=await supabaseClient.auth.signInWithPassword({email,password});
+ if(error){status.textContent='ورود انجام نشد: '+error.message;return;}
+ status.textContent='ورود موفق بود.'; updateOnlineAccount(data.user);
+}
+async function logoutOnline(){
+ const status=document.getElementById('regStatus');
+ if(!supabaseClient){status.textContent='اتصال Supabase هنوز تنظیم نشده است.';return;}
+ const {error}=await supabaseClient.auth.signOut();
+ status.textContent=error?('خروج انجام نشد: '+error.message):'با موفقیت خارج شدی.';
+ updateOnlineAccount(null);
+}
+function updateOnlineAccount(user){
+ const el=document.getElementById('accountState'); if(!el)return;
+ el.textContent=user?('وضعیت حساب: وارد شده به‌عنوان '+(user.user_metadata?.display_name||user.email||'کاربر')):(supabaseClient?'وضعیت حساب: وارد نشده':'وضعیت حساب: اتصال Supabase تنظیم نشده');
+}
+if(supabaseClient){supabaseClient.auth.getSession().then(({data})=>updateOnlineAccount(data.session?.user||null));supabaseClient.auth.onAuthStateChange((_event,session)=>updateOnlineAccount(session?.user||null));}
+async function registerOnline(){
+ const name=document.getElementById('regName').value.trim();
+ const email=document.getElementById('regEmail').value.trim();
+ const pass=document.getElementById('regPass').value;
+ const status=document.getElementById('regStatus');
+ if(!name||!email||pass.length<8){status.textContent='نام، ایمیل معتبر و رمز عبور حداقل ۸ نویسه وارد کن.';return;}
+ if(!supabaseClient){status.textContent='اتصال آنلاین هنوز تنظیم نشده است. URL پروژه و کلید عمومی Supabase باید در کد قرار بگیرند و سایت روی یک میزبان HTTPS منتشر شود.';return;}
+ status.textContent='در حال ثبت‌نام…';
+ const {data,error}=await supabaseClient.auth.signUp({email,password:pass,options:{data:{display_name:name}}});
+ if(error){status.textContent='ثبت‌نام انجام نشد: '+error.message;return;}
+ status.textContent=data?.user?.identities?.length===0?'این ایمیل قبلاً ثبت شده است.':'درخواست ثبت‌نام ارسال شد. اگر تأیید ایمیل فعال باشد، ایمیلت را بررسی کن.'; updateOnlineAccount(data?.session?.user||null);
+}
+function getArr(k){try{return JSON.parse(localStorage.getItem(k)||'[]')}catch(e){return []}}
+function savePath(name){localStorage.setItem('pythonChosenPath',name);document.getElementById('pathStatus').textContent='مسیر انتخاب‌شده: '+name+' ✓'}
+function checkChallenge(){let c=document.getElementById('challengeAnswer').value;let r=document.getElementById('challengeResult');if(/def\s+\w+\s*\([^)]*\)/.test(c)&&/%\s*2/.test(c)){r.textContent='آفرین! کدت به نظر از باقی‌مانده تقسیم بر ۲ استفاده می‌کند. حتماً آن را در آزمایشگاه اجرا و چند ورودی آزمایش کن. ⭐';let n=+(localStorage.getItem('pythonChallengePoints')||0)+10;localStorage.setItem('pythonChallengePoints',n)}else{r.textContent='راهنمایی: یک تابع تعریف کن، از n % 2 استفاده کن و برای حالت‌های مختلف خروجی برگردان.'}}
+function renderFavorites(){let a=getArr('pythonFavorites');document.getElementById('favList').innerHTML=a.map((x,i)=>`<p>📘 ${esc(x)} <button onclick="removeFavorite(${i})">حذف</button></p>`).join('')||'<p class="muted">هنوز درسی ذخیره نشده.</p>'}
+function addFavorite(){let x=document.getElementById('favInput').value.trim();if(!x)return;let a=getArr('pythonFavorites');a.push(x);localStorage.setItem('pythonFavorites',JSON.stringify([...new Set(a)]));document.getElementById('favInput').value='';renderFavorites()}
+function removeFavorite(i){let a=getArr('pythonFavorites');a.splice(i,1);localStorage.setItem('pythonFavorites',JSON.stringify(a));renderFavorites()}
+function makeStudyPlan(){let n=+document.getElementById('studyMinutes').value;let parts=n<=15?['۵ دقیقه مرور','۷ دقیقه درس جدید','۳ دقیقه تمرین']:n<=30?['۵ دقیقه مرور','۱۵ دقیقه درس جدید','۱۰ دقیقه تمرین']:n<=45?['۵ دقیقه مرور','۲۰ دقیقه درس جدید','۱۵ دقیقه تمرین','۵ دقیقه یادداشت']:['۱۰ دقیقه مرور','۲۵ دقیقه درس جدید','۲۰ دقیقه تمرین','۵ دقیقه یادداشت'];document.getElementById('studyPlanResult').innerHTML='<ol>'+parts.map(esc).map(x=>'<li>'+x+'</li>').join('')+'</ol><button id="planDoneBtn" type="button">علامت‌گذاری به‌عنوان انجام‌شده</button>';document.getElementById('planDoneBtn').onclick=()=>{localStorage.setItem('pythonPlanDone',new Date().toDateString());document.getElementById('planDoneBtn').textContent='برنامه امروز انجام شد ✓'};localStorage.setItem('pythonStudyPlan',JSON.stringify({minutes:n,date:new Date().toDateString(),parts}))}
+function askLocalAI(){let q=document.getElementById('aiQuestion').value.toLowerCase();let ans='';if(!q.trim())ans='اول سؤالت را بنویس.';else if(q.includes('list')||q.includes('لیست'))ans='list قابل تغییر است؛ می‌توانی عضو اضافه یا حذف کنی. نمونه: nums = [1, 2, 3] سپس nums.append(4).';else if(q.includes('tuple')||q.includes('تاپل'))ans='tuple شبیه لیست است، اما پس از ساخته‌شدن قابل تغییر نیست؛ نمونه: point = (3, 5).';else if(q.includes('خطا')||q.includes('error'))ans='متن کامل خطا را بخوان و شماره خط را بررسی کن. کد را به بخش‌های کوچک تقسیم کن و با print مقدار متغیرها را آزمایش کن.';else if(q.includes('for')||q.includes('حلقه'))ans='حلقه for برای پیمایش اعضا یا تکرار روی یک بازه کاربرد دارد. نمونه: for i in range(5): print(i)';else if(q.includes('تابع')||q.includes('function'))ans='تابع با def تعریف می‌شود. مثال: def square(n): return n * n';else if(q.includes('شرط')||q.includes('if'))ans='برای شرط از if و در صورت نیاز elif و else استفاده کن. تورفتگی خطوط داخل شرط ضروری است.';else ans='برای بررسی بهتر، موضوع را دقیق‌تر بنویس و یک نمونه کد یا متن خطا هم اضافه کن. این دستیار محلی است و هنوز مدل هوش مصنوعی واقعی ندارد.';document.getElementById('aiAnswer').innerHTML='<p>'+esc(ans)+'</p>'}
+function postLocalQuestion(){let t=document.getElementById('boardTitle').value.trim(),b=document.getElementById('boardBody').value.trim();if(!t||!b){alert('عنوان و متن پرسش را وارد کن.');return}let a=getArr('pythonLocalBoard');a.unshift({t,b,date:new Date().toLocaleDateString('fa-IR')});localStorage.setItem('pythonLocalBoard',JSON.stringify(a.slice(0,30)));document.getElementById('boardTitle').value='';document.getElementById('boardBody').value='';renderBoard()}
+function renderBoard(){let a=getArr('pythonLocalBoard');document.getElementById('boardPosts').innerHTML=a.map(x=>`<article class="extra-card"><h3>${esc(x.t)}</h3><p>${esc(x.b)}</p><small>${esc(x.date)}</small></article>`).join('')||'<p class="muted">هنوز پرسشی ثبت نشده.</p>'}
+function esc(x){return String(x).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+
+
+renderFavorites();renderBoard();if(localStorage.getItem('pythonChosenPath'))document.getElementById('pathStatus').textContent='مسیر انتخاب‌شده: '+localStorage.getItem('pythonChosenPath');
+
+// Compact single-section navigation: only the selected page is shown, so scrolling is much shorter.
+(function(){
+ const main=document.querySelector('main');
+ const nav=document.querySelector('nav');
+ if(!main||!nav)return;
+ const pages=[...main.querySelectorAll(':scope > section')];
+ function showPage(id,scroll=true){
+   let target=id==='home'?null:document.getElementById(id);
+   if(id!=='home'&&(!target||!main.contains(target)))return;
+   pages.forEach((p,i)=>{
+     const isHome=id==='home'&&(i===0||i===1);
+     p.classList.toggle('section-page-hidden', !(p===target||isHome));
+   });
+   nav.querySelectorAll('a').forEach(a=>a.classList.toggle('active-tab',a.getAttribute('href')==='#'+id));
+   if(scroll)window.scrollTo({top:0,behavior:'smooth'});
+ }
+ nav.addEventListener('click',function(e){const a=e.target.closest('a[href^="#"]');if(!a)return;const id=a.getAttribute('href').slice(1);if(id==='home'||document.getElementById(id)){e.preventDefault();history.replaceState(null,'','#'+id);showPage(id,true)}});
+ document.addEventListener('click',function(e){const a=e.target.closest('a[href^="#"]');if(!a||nav.contains(a))return;const id=a.getAttribute('href').slice(1);if(document.getElementById(id)){showPage(id,true)}});
+ const initial=location.hash.slice(1);showPage(initial&&document.getElementById(initial)?initial:'home',false);
+})();
+</script>
+</body></html>
